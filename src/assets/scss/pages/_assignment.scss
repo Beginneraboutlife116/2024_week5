@@ -1,0 +1,34 @@
+@use "../abstract/sizes" as *;
+
+.assignment {
+  &__dropdown {
+    .dropdown-menu {
+      inset-block-start: calc(100% - 4px);
+      inline-size: $assignment-dropdown-menu-inline-size;
+    }
+  }
+
+  &__dropdown--more {
+    .dropdown-toggle {
+      &::after {
+        content: none;
+      }
+
+      + .dropdown-menu {
+        inset-block-start: calc(100% + 4px);
+        inset-inline-end: 0;
+      }
+    }
+  }
+
+  &__reply-text-select {
+    max-inline-size: $assignment-reply-text-select-inline-size;
+    background-size: 1.5rem;
+    background-position: right;
+  }
+
+  &__reply-textarea {
+    block-size: $assignment-reply-textarea-block-size;
+    resize: none;
+  }
+}
