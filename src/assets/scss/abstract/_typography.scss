@@ -1,0 +1,22 @@
+// Lato
+@font-face {
+  font-family: "Lato";
+  src: url("/src/assets/fonts/lato/regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/src/assets/fonts/lato/bold.ttf") format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+// Roboto Mono
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/src/assets/fonts/roboto-mono/regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
