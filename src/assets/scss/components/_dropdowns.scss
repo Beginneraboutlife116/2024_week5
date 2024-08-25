@@ -1,0 +1,13 @@
+.dropdown {
+  &-toggle {
+    --dropdown-caret: url("/src/assets/images/dropdown/arrow-down.svg");
+
+    display: flex;
+
+    &::after {
+      content: var(--dropdown-caret);
+      border: none;
+      margin-inline-start: 0.5rem;
+    }
+  }
+}
