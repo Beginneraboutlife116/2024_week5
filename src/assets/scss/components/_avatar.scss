@@ -1,0 +1,5 @@
+@use "../abstract/sizes" as *;
+
+.avatar {
+  max-inline-size: $avatar-inline-size;
+}

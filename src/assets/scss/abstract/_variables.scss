@@ -1,0 +1,39 @@
+$font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+
+$self-primary: #198754;
+$self-border-color: #ced4da;
+$self-dropdown-link-active-color: #212529;
+$self-dropdown-link-active-bg: #f8f9fa;
+$self-input-placeholder-color: #ced4da;
+
+$primary: $self-primary;
+$border-color: $self-border-color;
+$dropdown-link-active-color: $self-dropdown-link-active-color;
+$dropdown-link-active-bg: $self-dropdown-link-active-bg;
+$dropdown-border-color: $self-border-color;
+$input-placeholder-color: $self-input-placeholder-color;
+$form-select-indicator: url("/src/assets/images/editor/arrow-down.svg");
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.5,
+  6: $spacer * 2,
+  7: $spacer * 2.25,
+  8: $spacer * 3,
+);
+
+$icon-link-gap: 1rem;
+
+$border-radius-sm: 0.125rem;
+
+$enable-negative-margins: true;
+$enable-rounded: false;
