@@ -28,8 +28,8 @@ import ArrowBackwardSvg from "./buttons/arrow-backward.svg";
 import ArrowForwardSvg from "./buttons/arrow-forward.svg";
 
 // editor
-import BoldSvg from "./editor/bold.svg";
-import ItalicSvg from "./editor/italic.svg";
+import TextBoldSvg from "./editor/text-bold.svg";
+import TextItalicSvg from "./editor/text-Italic.svg";
 import BulletedListSvg from "./editor/bulleted-list.svg";
 import NumberedListSvg from "./editor/numbered-list.svg";
 import AttachPhotoSvg from "./editor/attach-photo.svg";
@@ -67,8 +67,8 @@ export {
   ArrowForwardSvg,
 
   // editors
-  BoldSvg,
-  ItalicSvg,
+  TextBoldSvg,
+  TextItalicSvg,
   BulletedListSvg,
   NumberedListSvg,
   AttachPhotoSvg,

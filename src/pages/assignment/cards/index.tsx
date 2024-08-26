@@ -11,8 +11,8 @@ import {
   AttachedFileSvg,
   ArrowForwardSvg,
   ArrowBackwardSvg,
-  BoldSvg,
-  ItalicSvg,
+  TextBoldSvg,
+  TextItalicSvg,
   BulletedListSvg,
   NumberedListSvg,
   AttachPhotoSvg,
@@ -108,10 +108,10 @@ export default function Cards() {
                 <option value="header-6">Header 6</option>
               </select>
               <button type="button" className="btn border-0 p-0">
-                <img src={BoldSvg} alt="bold" />
+                <img src={TextBoldSvg} alt="bold" />
               </button>
               <button type="button" className="btn border-0 p-0">
-                <img src={ItalicSvg} alt="italic" />
+                <img src={TextItalicSvg} alt="italic" />
               </button>
               <button type="button" className="btn border-0 p-0">
                 <img src={BulletedListSvg} alt="bulleted list" />
