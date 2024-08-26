@@ -14,40 +14,47 @@ import AssignmentCards from "./pages/assignment/cards";
 
 import Course from "./pages/course";
 
-const router = createBrowserRouter([
+const { BASE_URL } = import.meta.env;
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          path: "/dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "/assignment",
+          loader: assignmentLoader,
+          element: <Assignment />,
+          children: [
+            {
+              path: ":id",
+              element: <AssignmentCards />,
+            },
+          ],
+        },
+        {
+          path: "/course",
+          element: <Course />,
+          children: [
+            {
+              path: ":id",
+              element: <Course />,
+            },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "/assignment",
-        loader: assignmentLoader,
-        element: <Assignment />,
-        children: [
-          {
-            path: ":id",
-            element: <AssignmentCards />,
-          },
-        ],
-      },
-      {
-        path: "/course",
-        element: <Course />,
-        children: [
-          {
-            path: ":id",
-            element: <Course />,
-          },
-        ],
-      },
-    ],
-  },
-]);
+    basename: BASE_URL,
+  }
+);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
