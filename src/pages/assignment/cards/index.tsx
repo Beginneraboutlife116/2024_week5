@@ -2,6 +2,8 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 
+import ButtonDropdown from "../../../components/button-dropdown";
+
 import {
   MoreSvg,
   FavoriteSvg,
@@ -22,7 +24,6 @@ import { PREFIX_CLASS } from "../utils";
 
 export default function Cards() {
   const [isEdit, setIsEdit] = useState(false);
-  const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
 
   return (
     <div className="ps-4">
@@ -37,28 +38,11 @@ export default function Cards() {
               Please check this file for me, thanks!
             </h2>
           </div>
-          <div className={clsx("dropdown", `${PREFIX_CLASS}__dropdown--more`)}>
-            <button
-              className={clsx("btn border-0 p-0 dropdown-toggle", {
-                show: isMoreDropdownOpen,
-              })}
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              onClick={() => setIsMoreDropdownOpen(!isMoreDropdownOpen)}>
-              <img src={MoreSvg} alt="more" />
-            </button>
-            <ul
-              className={clsx("dropdown-menu py-0", {
-                show: isMoreDropdownOpen,
-              })}>
-              <li>
-                <button type="button" className="dropdown-item">
-                  more options
-                </button>
-              </li>
-            </ul>
-          </div>
+          <ButtonDropdown
+            className={`${PREFIX_CLASS}__dropdown--more`}
+            title={<img src={MoreSvg} alt="more" />}
+            data={[{ id: 0, content: "more options" }]}
+          />
         </div>
         <div className="card-body d-flex align-items-start pe-6">
           <div className="avatar ratio ratio-1x1 me-2">

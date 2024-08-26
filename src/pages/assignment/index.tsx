@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import clsx from "clsx";
 
-import LinkDropdown from "../../components/dropdown";
+import LinkDropdown from "../../components/link-dropdown";
 
 import {
   SearchSvg,
@@ -54,7 +54,11 @@ export default function Assignment() {
       <header className="py-6 d-flex align-items-center">
         <h1 className="fs-4 me-7">Assignment</h1>
 
-        <LinkDropdown title="All Courses" data={modifiedCourses} />
+        <LinkDropdown
+          data={modifiedCourses}
+          title="All Courses"
+          autoClose="outside"
+        />
 
         <div className="ms-auto">
           <button type="button" className="btn me-5 p-0 border-0">
@@ -72,8 +76,9 @@ export default function Assignment() {
         <div className="col-auto">
           <LinkDropdown
             className={`${PREFIX_CLASS}__dropdown`}
-            title={`All (${modifiedMessages.length})`}
             data={modifiedMessages}
+            title={`All (${modifiedMessages.length})`}
+            offset={[0, -4]}
           />
         </div>
         <section className="col-8">
